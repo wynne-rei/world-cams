@@ -3,8 +3,10 @@
 import { useEffect } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useSearchParams } from 'next/navigation';
 import type { Camera } from '@/types/camera';
-import { categoryColor, categoryLabel, ui } from '@/lib/i18n';
+import { categoryColor, categoryLabel, localizeName, ui } from '@/lib/i18n';
+import { useLocale } from '@/lib/use-locale';
 import Link from 'next/link';
 
 type Props = {
@@ -66,6 +68,9 @@ function FitBounds({ cameras }: { cameras: Camera[] }) {
 }
 
 export default function CameraMap({ cameras }: Props) {
+  const locale = useLocale();
+  const sp = useSearchParams();
+  const qs = sp.toString();
   return (
     <MapContainer
       center={DEFAULT_CENTER}
@@ -80,37 +85,42 @@ export default function CameraMap({ cameras }: Props) {
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       />
       <FitBounds cameras={cameras} />
-      {cameras.map((cam) => (
-        <CircleMarker
-          key={cam.id}
-          center={[cam.lat, cam.lng]}
-          radius={7}
-          pathOptions={{
-            color: categoryColor[cam.category],
-            fillColor: categoryColor[cam.category],
-            fillOpacity: 0.85,
-            weight: 2,
-          }}
-        >
-          <Popup>
-            <div className="space-y-1">
-              <p className="text-[11px] font-semibold uppercase tracking-wider opacity-70">
-                {categoryLabel[cam.category].ja}
-              </p>
-              <p className="text-sm font-bold">{cam.name}</p>
-              <p className="text-xs opacity-70">
-                {cam.region} · {cam.sourceLabel}
-              </p>
-              <Link
-                href={`/cameras/${cam.id}`}
-                className="mt-1 inline-block text-xs font-bold text-blue-600 underline"
-              >
-                {ui.ja.watchLive} →
-              </Link>
-            </div>
-          </Popup>
-        </CircleMarker>
-      ))}
+      {cameras.map((cam) => {
+        const detailHref = qs
+          ? `/cameras/${cam.id}?${qs}`
+          : `/cameras/${cam.id}`;
+        return (
+          <CircleMarker
+            key={cam.id}
+            center={[cam.lat, cam.lng]}
+            radius={7}
+            pathOptions={{
+              color: categoryColor[cam.category],
+              fillColor: categoryColor[cam.category],
+              fillOpacity: 0.85,
+              weight: 2,
+            }}
+          >
+            <Popup>
+              <div className="space-y-1">
+                <p className="text-[11px] font-semibold uppercase tracking-wider opacity-70">
+                  {categoryLabel[cam.category][locale]}
+                </p>
+                <p className="text-sm font-bold">{localizeName(cam, locale)}</p>
+                <p className="text-xs opacity-70">
+                  {cam.region} · {cam.sourceLabel}
+                </p>
+                <Link
+                  href={detailHref}
+                  className="mt-1 inline-block text-xs font-bold text-blue-600 underline"
+                >
+                  {ui[locale].watchLive} →
+                </Link>
+              </div>
+            </Popup>
+          </CircleMarker>
+        );
+      })}
     </MapContainer>
   );
 }

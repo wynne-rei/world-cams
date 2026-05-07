@@ -1,6 +1,7 @@
 'use client';
 
 import { ui } from '@/lib/i18n';
+import { useLocale } from '@/lib/use-locale';
 
 export type ViewMode = 'map' | 'grid';
 
@@ -10,6 +11,9 @@ type Props = {
 };
 
 export function ViewToggle({ mode, onChange }: Props) {
+  const locale = useLocale();
+  const t = ui[locale];
+
   return (
     <div
       role="tablist"
@@ -17,7 +21,7 @@ export function ViewToggle({ mode, onChange }: Props) {
     >
       {(['map', 'grid'] as const).map((value) => {
         const isActive = mode === value;
-        const label = value === 'map' ? ui.ja.viewMap : ui.ja.viewGrid;
+        const label = value === 'map' ? t.viewMap : t.viewGrid;
         return (
           <button
             key={value}

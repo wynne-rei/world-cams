@@ -2,6 +2,7 @@
 
 import { CATEGORIES, type Category } from '@/types/camera';
 import { categoryColor, categoryLabel, ui } from '@/lib/i18n';
+import { useLocale } from '@/lib/use-locale';
 
 type Props = {
   active: Category | 'all';
@@ -10,11 +11,12 @@ type Props = {
 };
 
 export function CategoryFilter({ active, onChange, counts }: Props) {
+  const locale = useLocale();
   const items: Array<{ key: Category | 'all'; label: string; color?: string }> = [
-    { key: 'all', label: ui.ja.filterAll },
+    { key: 'all', label: ui[locale].filterAll },
     ...CATEGORIES.map((c) => ({
       key: c,
-      label: categoryLabel[c].ja,
+      label: categoryLabel[c][locale],
       color: categoryColor[c],
     })),
   ];

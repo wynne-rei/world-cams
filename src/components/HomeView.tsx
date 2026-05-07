@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { CATEGORIES, type Camera, type Category } from '@/types/camera';
+import { type Camera, type Category } from '@/types/camera';
 import { CategoryFilter } from './CategoryFilter';
 import { ViewToggle, type ViewMode } from './ViewToggle';
 import { CameraCard } from './CameraCard';
 import { ui } from '@/lib/i18n';
+import { useLocale } from '@/lib/use-locale';
 
 const CameraMap = dynamic(() => import('./CameraMap'), {
   ssr: false,
@@ -22,6 +23,8 @@ type Props = {
 };
 
 export function HomeView({ cameras }: Props) {
+  const locale = useLocale();
+  const t = ui[locale];
   const [view, setView] = useState<ViewMode>('map');
   const [filter, setFilter] = useState<Category | 'all'>('all');
 
@@ -49,15 +52,10 @@ export function HomeView({ cameras }: Props) {
     [cameras, filter],
   );
 
-  // Ensure CATEGORIES is referenced so unused-import lint is happy.
-  void CATEGORIES;
-
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs text-white/50">
-          {ui.ja.cameraCount(visible.length)}
-        </p>
+        <p className="text-xs text-white/50">{t.cameraCount(visible.length)}</p>
         <ViewToggle mode={view} onChange={setView} />
       </div>
 
