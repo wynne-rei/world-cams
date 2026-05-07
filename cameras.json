@@ -6,9 +6,9 @@
     "country": "🇺🇸 USA",
     "city": "New York",
     "type": "youtube",
-    "videoId": "1-iS7LArMPA",
+    "videoId": "VGnFLdQW39A",
     "externalUrl": "https://www.earthcam.com/usa/newyork/timessquare/",
-    "description": "世界の交差点。24時間人と広告が動き続ける"
+    "description": "世界の交差点。FOX 5 NY公式の24/7ライブ"
   },
   {
     "id": "shibuya-scramble",
@@ -17,9 +17,9 @@
     "country": "🇯🇵 Japan",
     "city": "東京",
     "type": "youtube",
-    "videoId": "3kPH7kTphnE",
-    "externalUrl": "https://www.youtube.com/results?search_query=%E6%B8%8B%E8%B0%B7+%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB+%E3%83%A9%E3%82%A4%E3%83%96",
-    "description": "1回の青信号で3000人が交差する世界最大の交差点"
+    "videoId": "8H3nRCFVR6Y",
+    "externalUrl": "https://www.youtube.com/@ANNnewsCH",
+    "description": "ANN/テレ朝公式。1回の青で3000人が交差する世界最大の交差点"
   },
   {
     "id": "mt-fuji-fujikawaguchiko",
@@ -28,9 +28,9 @@
     "country": "🇯🇵 Japan",
     "city": "山梨",
     "type": "youtube",
-    "videoId": "lyOTodVzcEU",
-    "externalUrl": "https://www.youtube.com/results?search_query=%E5%AF%8C%E5%A3%AB%E5%B1%B1+%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9",
-    "description": "霊峰富士をリアルタイムで。朝焼けと雲海が狙い目"
+    "videoId": "bdUbACCWmoY",
+    "externalUrl": "https://www.youtube.com/@KTV",
+    "description": "ケーブルテレビ河口湖公式。大石公園からの霊峰富士。朝焼けと雲海が狙い目"
   },
   {
     "id": "eiffel-tower",
@@ -61,7 +61,7 @@
     "country": "🇨🇦 Canada",
     "city": "Niagara",
     "type": "youtube",
-    "videoId": "9JhgsI3wHwM",
+    "videoId": "qx7gry390YA",
     "externalUrl": "https://www.earthcam.com/canada/niagarafalls/",
     "description": "夜のライトアップ＋花火（金土）あり。霧の音が眠気覚まし"
   },
@@ -72,9 +72,9 @@
     "country": "🇺🇸 USA",
     "city": "Honolulu",
     "type": "youtube",
-    "videoId": "L2sgAiSQ7tw",
+    "videoId": "8waVy4wM1tM",
     "externalUrl": "https://www.earthcam.com/usa/hawaii/honolulu/waikiki/",
-    "description": "ハワイのサンセット。日本との時差を体感"
+    "description": "Waikiki Beach Marriott公式提携ライブ。ハワイのサンセット時差体感"
   },
   {
     "id": "old-faithful",
@@ -94,7 +94,7 @@
     "country": "🇿🇦 South Africa",
     "city": "Tembe",
     "type": "youtube",
-    "videoId": "Fooi9OhMpC8",
+    "videoId": "gdrNUUf-cQw",
     "externalUrl": "https://www.africam.com/",
     "description": "象・キリン・ライオンが水場に来る。日本時間の早朝〜午前が狙い目"
   },
@@ -105,7 +105,7 @@
     "country": "🇺🇸 USA",
     "city": "Monterey",
     "type": "youtube",
-    "videoId": "DDTeR5KGYgw",
+    "videoId": "7N9-FODmuBA",
     "externalUrl": "https://www.montereybayaquarium.org/animals/live-cams",
     "description": "クラゲ専用ライブ。BGM代わりに最強"
   },
@@ -116,7 +116,7 @@
     "country": "🇺🇸 USA",
     "city": "Ithaca",
     "type": "youtube",
-    "videoId": "N609loYkFJo",
+    "videoId": "x10vL6_47Dw",
     "externalUrl": "https://www.allaboutbirds.org/cams/",
     "description": "巣箱・餌台に来る野鳥たち。鳥類学の聖地コーネル大学運営"
   },
@@ -127,7 +127,7 @@
     "country": "🇮🇸 Iceland",
     "city": "Reykjanes",
     "type": "youtube",
-    "videoId": "DV1pWOj7v-Y",
+    "videoId": "kXD4A9uFHcg",
     "externalUrl": "https://www.ruv.is/utsendingar/beint/",
     "description": "国営放送RÚVが火山を24時間配信。噴火期は絶景"
   },
@@ -137,10 +137,10 @@
     "category": "nature",
     "country": "🇺🇸 USA",
     "city": "Alaska",
-    "type": "youtube",
-    "videoId": "tQwt_Bl6Z4Q",
+    "type": "external",
+    "videoId": "",
     "externalUrl": "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-brooks-falls",
-    "description": "サーモンを狙うグリズリー。explore.org運営の公式ライブ"
+    "description": "サーモンを狙うグリズリー。explore.org公式（6月中旬〜10月のサーモン遡上シーズンのみ稼働）"
   },
   {
     "id": "haneda-airport",
@@ -149,9 +149,9 @@
     "country": "🇯🇵 Japan",
     "city": "東京",
     "type": "youtube",
-    "videoId": "FzEtbwcXBwQ",
-    "externalUrl": "https://www.youtube.com/results?search_query=%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF+%E3%83%A9%E3%82%A4%E3%83%96",
-    "description": "離着陸を一日中眺められる。航空ファン御用達"
+    "videoId": "5uv5cqSXHsA",
+    "externalUrl": "https://www.youtube.com/@ANNnewsCH",
+    "description": "ANN/テレ朝公式の羽田第2ターミナル24時間配信。航空ファン御用達"
   },
   {
     "id": "lax-airport",
@@ -171,9 +171,9 @@
     "country": "🇯🇵 Japan",
     "city": "兵庫",
     "type": "youtube",
-    "videoId": "MfP-h6Z5OTo",
-    "externalUrl": "https://www.youtube.com/results?search_query=%E7%A5%9E%E6%88%B8%E6%B8%AF+%E3%83%A9%E3%82%A4%E3%83%96",
-    "description": "ハーバーランドからの夜景は世界三大夜景級"
+    "videoId": "AU_2zfM4m68",
+    "externalUrl": "https://www.kobe-port.org/",
+    "description": "神戸ウォーターフロント開発機構公式。メリケンパーク・ポートタワーからの夜景"
   },
   {
     "id": "hong-kong-victoria",
@@ -204,9 +204,9 @@
     "country": "🇯🇵 Japan",
     "city": "大阪",
     "type": "youtube",
-    "videoId": "ZjP65WOQ8GI",
-    "externalUrl": "https://www.youtube.com/results?search_query=%E9%81%93%E9%A0%93%E5%A0%80+%E3%83%A9%E3%82%A4%E3%83%96",
-    "description": "大阪のシンボル。タイガース勝利時はここで歓喜の祭りが"
+    "videoId": "bzn2QWfOLFY",
+    "externalUrl": "https://www.youtube.com/@mbsnews",
+    "description": "MBS（毎日放送）公式。大阪のシンボル。タイガース勝利時は歓喜の祭り"
   },
   {
     "id": "us-canada-border",
@@ -336,7 +336,7 @@
     "country": "🛰️ Space",
     "city": "ISS",
     "type": "youtube",
-    "videoId": "P9C25Un7xaM",
+    "videoId": "uwXgcTc8oY8",
     "externalUrl": "https://www.nasa.gov/live",
     "description": "NASAライブ。軌道速度28000km/hで地球を周回中"
   },
