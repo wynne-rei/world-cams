@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORLD WATCH ROOM — 世界監視室</title>
+<meta name="description" content="世界中の公開ライブカメラと監視カメラのキュレーション。掲載許諾OKなものだけを集めた監視室">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <h1>WORLD WATCH ROOM</h1>
+    <span class="subtitle">世界監視室 / curated live cams</span>
+  </div>
+  <div class="status">
+    <span class="rec">● REC</span>
+    <span id="clock">--:--:-- UTC</span>
+    <span class="count" id="camCount">0 CAMS</span>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-cat="all">ALL</button>
+  <button class="tab" data-cat="scenic">観光・絶景</button>
+  <button class="tab" data-cat="traffic">交通・道路</button>
+  <button class="tab" data-cat="nature">自然・動物</button>
+  <button class="tab" data-cat="city">都市・空港・港</button>
+  <button class="tab" data-cat="cctv">監視カメラ</button>
+  <input type="search" id="search" placeholder="🔍 場所・国名・キーワード">
+</nav>
+
+<main id="grid" class="grid"></main>
+
+<footer class="foot">
+  <span>掲載カメラはすべて公開・配信許諾済みのもの。Insecam系不正アクセスカメラは一切扱いません。</span>
+  <span>© WORLD WATCH ROOM</span>
+</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-bg"></div>
+  <div class="modal-card">
+    <button class="close" id="closeBtn">×</button>
+    <div class="modal-header">
+      <h2 id="mTitle"></h2>
+      <p id="mLoc"></p>
+    </div>
+    <div class="modal-frame" id="mFrame"></div>
+    <p id="mDesc"></p>
+    <a id="mExt" href="#" target="_blank" rel="noopener">外部サイトで見る ↗</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
